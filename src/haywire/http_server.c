@@ -240,6 +240,7 @@ int hw_http_open()
 void http_stream_on_connect(uv_stream_t* stream, int status)
 {
     http_connection* connection = create_http_connection();
+    
     uv_tcp_init(uv_loop, &connection->stream);
     http_parser_init(&connection->parser, HTTP_REQUEST);
     

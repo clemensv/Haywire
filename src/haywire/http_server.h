@@ -4,13 +4,13 @@
 #include "http_connection.h"
 #include "http_parser.h"
 
-typedef struct
+typedef struct tag_hw_route_entry
 {
     http_request_callback callback;
     void* user_data;
 } hw_route_entry;
 
-typedef struct
+typedef struct tag_hw_wroite_context
 {
     http_connection* connection;
     void* user_data;

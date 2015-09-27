@@ -3,7 +3,7 @@
 #include "http_parser.h"
 #include "http_request.h"
 
-typedef struct
+typedef struct tag_http_connection
 {
     uv_tcp_t stream;
     http_parser parser;
@@ -18,6 +18,6 @@ typedef struct
     uv_buf_t response_buffers[1024];
     int response_buffers_count;
     int prevbuflen;
-    char request_buffer[4000096];
+    char request_buffer[4096];
     int request_buffer_length;
 } http_connection;

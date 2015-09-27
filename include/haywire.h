@@ -150,7 +150,7 @@ typedef struct
     int response_batch_size;
 } configuration;
 
-typedef struct
+typedef struct tag_http_request
 {
     unsigned short http_major;
     unsigned short http_minor;
